@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Next.js</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #0070f3;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    code {
+      background: #e9ecef;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tutorial de Next.js</h1>
+  <p><strong>Asignatura:</strong> Desarrollo de Aplicaciones en Red</p>
+  <p><strong>Autor:</strong>Roberto Fraire</p>
+
+  <div class="section">
+    <h2>1. Justificación del Framework</h2>
+    <p><strong>Next.js</strong> es un framework basado en React que permite crear aplicaciones web rápidas y modernas. Facilita el desarrollo de sitios estáticos y dinámicos con renderizado en el servidor (SSR), mejorando la velocidad y el SEO.</p>
+    <h3>¿Para qué sirve?</h3>
+    <ul>
+      <li>Desarrollar sitios con SEO optimizado</li>
+      <li>Crear aplicaciones web completas</li>
+      <li>Renderizado en servidor y cliente</li>
+    </ul>
+    <h3>Lenguajes y prerrequisitos</h3>
+    <p>Usa <strong>JavaScript</strong> o <strong>TypeScript</strong>, junto con HTML y CSS. Requiere tener instalado Node.js y conocimientos básicos de React.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Instalación</h2>
+    <p>Para comenzar con Next.js se debe instalar Node.js. Luego, desde la terminal:</p>
+    <pre><code>npx create-next-app@latest mi-proyecto
+cd mi-proyecto
+npm run dev</code></pre>
+    <p>Esto creará y ejecutará un servidor local en <code>http://localhost:3000</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Primeros Pasos: "Hola Mundo"</h2>
+    <p>En el archivo <code>pages/index.js</code> escribe:</p>
+    <pre><code>export default function Home() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;¡Hola Mundo desde Next.js!&lt;/h1&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+    <p>Guarda y visualiza el resultado en el navegador.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Utilización del Framework</h2>
+    <h3>Rutas automáticas</h3>
+    <p>En Next.js cada archivo en <code>pages/</code> se convierte en una ruta. Por ejemplo:</p>
+    <ul>
+      <li><code>pages/index.js</code> → /</li>
+      <li><code>pages/about.js</code> → /about</li>
+    </ul>
+
+    <h3>Componentes</h3>
+    <pre><code>export default function Header() {
+  return (&lt;h2&gt;Mi sitio en Next.js&lt;/h2&gt;);
+}</code></pre>
+    <p>Importa el componente en tu página principal para reutilizarlo.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Funcionamiento Interno</h2>
+    <p>Next.js organiza las páginas dentro de la carpeta <code>pages/</code> y gestiona automáticamente las rutas.</p>
+    <h3>Ejemplo de API interna</h3>
+    <pre><code>export default function handler(req, res) {
+  res.status(200).json({ mensaje: 'Hola desde la API de Next.js' });
+}</code></pre>
+    <p>Guarda este archivo como <code>pages/api/hola.js</code> y accede desde el navegador.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Conclusiones</h2>
+    <ul>
+      <li>Next.js amplía las capacidades de React para proyectos reales.</li>
+      <li>Permite combinar frontend y backend en un mismo entorno.</li>
+      <li>Ideal para sitios modernos, rápidos y optimizados.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>7. Recursos y Referencias</h2>
+    <ul>
+      <li><a href="https://nextjs.org/docs" target="_blank">Documentación oficial</a></li>
+      <li><a href="https://www.freecodecamp.org/espanol/news/aprende-next-js-desde-cero/" target="_blank">Guía FreeCodeCamp</a></li>
+      <li><a href="https://vercel.com/" target="_blank">Plataforma de despliegue Vercel</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>© 2025 Tutorial elaborado por Isaac Torres — Desarrollo de Aplicaciones en Red</p>
+  </footer>
+</body>
+</html>
